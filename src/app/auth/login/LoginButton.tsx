@@ -7,7 +7,8 @@ export const LoginButton = () =>{
 	const { pending } = useFormStatus();
 	return (
 		<Button className='w-full flex gap-2' disabled={pending} aria-disabled={pending}>
-			<Image src={"/github.svg"} width={20} height={20} alt='Github logo' /> Log in with Github
-		</Button>
+			<Image src={"/github.svg"} width={20} height={20} alt='Github logo' /> 
+			<span>{pending ? "Logging in..." : "Log in with Github"}</span>
+		</Button>	
 	);
 }
