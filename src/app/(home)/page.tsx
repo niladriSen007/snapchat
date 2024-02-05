@@ -2,12 +2,14 @@ import Navbar from "@/components/shared/Navbar";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
+import { auth } from "../../auth";
 
 
 
-export default function Home() {
+export default async function Home() {
   
-  const session = false
+  const session = await auth();
+  console.log(session)
 
   return (
     <div className=" bg-gradient-to-r from-lime-400 to-green-500 ">
